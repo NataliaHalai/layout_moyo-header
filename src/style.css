@@ -1,3 +1,7 @@
+:root {
+  --color-blue: rgb(0, 172, 220);
+}
+
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
@@ -8,7 +12,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0 50px;
-  background-color: rgb(256, 256, 256);
+  background-color: white;
 }
 
 .logo__img {
@@ -24,7 +28,6 @@ body {
 
 .nav__link {
   display: block;
-  margin-left: 20px;
   height: 60px;
   font-size: 12px;
   font-weight: 500;
@@ -34,20 +37,17 @@ body {
   line-height: 60px;
 }
 
-.no-margin {
-  margin: 0;
-}
-
 .nav__link:hover {
-  color: rgba(0, 172, 220, 1);
+  color: var(--color-blue);
 }
 
 .is-active {
-  color: rgba(0, 172, 220, 1);
+  position: relative;
+  color: var(--color-blue);
 }
 
-.nav__item {
-  position: relative; /* родитель */
+.nav__item + .nav__item {
+  margin-left: 20px;
 }
 
 .is-active::after {
@@ -58,7 +58,7 @@ body {
   display: block;
   height: 4px;
   width: 37px;
-  background-color: rgba(0, 172, 220, 1);
+  background-color: var(--color-blue);
   border-radius: 8px;
   border: 0;
 }
